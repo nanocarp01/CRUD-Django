@@ -1,0 +1,30 @@
+{% extends 'TODO/layout.html ' %}
+
+{% block content %}
+
+<div class="colums text-center">
+    
+    <div class="column is-6">
+        <form method="POST">
+            {% csrf_token %}
+        <div class="field">
+            <label >Titulo de la tarea: </label>
+            <div class="control">
+                <input class="input" type="text" name="tarea" autofocus >
+            </div>
+        </div>
+        <div class="field">
+            <label >Descripción: </label>
+            <div class="control">
+                <textarea  rows="10" cols="50" name="descr" ></textarea>
+            </div>
+        </div>
+        
+        
+        <button type="submit" class="btn btn-primary">Agregar</button>
+    </form>
+    </div>
+    
+    
+</div>
+{% endblock %}

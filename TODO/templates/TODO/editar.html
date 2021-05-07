@@ -1,0 +1,26 @@
+{% extends 'TODO/layout.html ' %}
+
+{% block content %}
+<div class="container text-center">
+    <div class="form-group"></div>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="field">
+            <label >Titulo de la tarea: </label>
+            <div class="control">
+                {{ form.tarea }}
+            </div>
+        </div>
+        <div class="field">
+            <label >Descripción: </label>
+            <div class="control">
+                {{ form.descr }}
+            </div>
+        </div>
+
+    <button type="submit" class="btn btn-primary">Editar</button>
+    </div>
+    </form>
+    
+</div> 
+{% endblock %}
